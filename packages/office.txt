@@ -1,0 +1,1 @@
+texlive-basic texlive-bin texlive-formatsextra texlive-latexextra ghostscript pandoc mdp
