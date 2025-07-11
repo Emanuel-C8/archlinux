@@ -3,6 +3,10 @@ function installpackages()
 {
 for a in `cat $1`; 
 do
-	echo "here a package $a"
+	sudo pacman -Sy $a --noconfirm
 done
+}
+function installpackagesbatch()
+{
+	sudo pacman -Sy $(cat $1) --noconfirm
 }
