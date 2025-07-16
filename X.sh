@@ -31,12 +31,13 @@ EOF
     git clone https://git.suckless.org/dwm
     git clone https://git.suckless.org/dmenu
     git clone https://git.suckless.org/st
-
+    cd -
     echo "Building and installing dwm, dmenu, and st locally to ~/.local/bin ..."
     mkdir -p ~/.local/bin
     for app in dwm dmenu st; do
       cd ~/suckless/$app
       sudo make clean install
+      cd -
     done
 
     # Ensure ~/.local/bin is in PATH
