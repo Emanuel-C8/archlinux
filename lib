@@ -10,3 +10,8 @@ function installpackagesbatch()
 {
 	sudo pacman -Sy $(cat $1) --noconfirm
 }
+function yayinstallpackagesbatch()
+{
+	yay -S $(cat $1) --noconfirm
+}
+
