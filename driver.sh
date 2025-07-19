@@ -36,7 +36,28 @@ fi
 case "$GPU_VENDOR" in
     nvidia)
         echo "[ACTION] Installing NVIDIA drivers..."
-        pacman -Sy --noconfirm nvidia nvidia-utils nvidia-settings cuda-tools cudnn nvidia-prime
+	
+	# 0. IF YOU HAVE HYBRID GRAPHICS, INTEL
+	# sudo pacman -S xf86-video-intel
+	# 1. Update system
+	sudo pacman -Syu
+
+	# 2. Install kernel headers (choose one that matches your kernel)
+	sudo pacman -S linux-headers        # For default kernel
+	# sudo pacman -S linux-lts-headers  # If using LTS kernel
+
+	# 3. Install NVIDIA DKMS drivers and utilities
+	sudo pacman -S nvidia-dkms nvidia-utils nvidia-settings nvidia-prime cuda cuda-tools cudnn
+	
+	# 4. Blacklist nouveau
+	echo -e "blacklist nouveau\noptions nouveau modeset=0" | sudo tee /etc/modprobe.d/disable-nouveau.conf
+
+	# 5. Optional: Enable NVIDIA runtime power management (for laptops)
+	echo "options nvidia NVreg_DynamicPowerManagement=0x02 NVreg_DynamicPowerManagementVideoMemoryThreshold=100" | sudo tee /etc/modprobe.d/nvidia-power.conf
+
+	# 6. Regenerate initramfs
+	sudo mkinitcpio -P
+
         ;;
     amd)
         echo "[ACTION] Installing AMD GPU drivers..."
