@@ -48,7 +48,7 @@ case "$GPU_VENDOR" in
 
 	# 3. Install NVIDIA DKMS drivers and utilities
 	sudo pacman -S nvidia-dkms nvidia-utils nvidia-settings nvidia-prime cuda cuda-tools cudnn
-	
+		# substitute nvidia-dkms with nvidia if you just use *one* kernel 
 	# 4. Blacklist nouveau
 	echo -e "blacklist nouveau\noptions nouveau modeset=0" | sudo tee /etc/modprobe.d/disable-nouveau.conf
 
