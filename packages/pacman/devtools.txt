@@ -1,1 +1,1 @@
-go git github-cli python gcc
+go git github-cli python python-pip gcc
