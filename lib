@@ -3,15 +3,19 @@ function installpackages()
 {
 for a in `cat $1`; 
 do
-	sudo pacman -Sy $a --noconfirm
+	sudo pacman -Sy $a --noconfirm --needed
 done
 }
 function installpackagesbatch()
 {
-	sudo pacman -Sy $(cat $1) --noconfirm
+    sudo pacman -S $(cat $1) --noconfirm --needed
 }
 function yayinstallpackagesbatch()
 {
-	yay -S $(cat $1) --noconfirm
+    yay -S $(cat $1) --noconfirm --needed
+}
+function fullupgrade()
+{
+    sudo pacman -Syu --noconfirm
 }
 

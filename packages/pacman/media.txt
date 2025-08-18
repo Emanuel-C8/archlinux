@@ -1,1 +1,2 @@
- mpv cmus mpd ncmpcpp alsa-utils sox ffmpeg yt-dlp fbida kid3 perl-image-exiftool
+mpv celluloid cmus alsa-utils mupdf ffmpeg yt-dlp perl-image-exiftool fbida feh sxiv imv
+

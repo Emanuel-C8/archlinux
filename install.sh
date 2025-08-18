@@ -1,11 +1,15 @@
-chmod +x X.sh main.sh addconf.sh pkgmng.sh
+chmod +x driver.sh X.sh addconf.sh pacman.sh yay.sh
 
 ./X.sh
 
-sudo ./main.sh
+./driver.sh
 
-./pkgmng.sh
+./pacman.sh
+
+./yay.sh
 
 ./addconf.sh
 
-
+echo 'Compiling LaTeX'
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+sudo fmtutil-sys -all

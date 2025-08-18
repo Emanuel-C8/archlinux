@@ -1,0 +1,118 @@
+# choose ONE per category → fallback = commented
+
+######################################################################
+# MEDIA DOCUMENTS - OPERATOR NOTES
+######################################################################
+
+== TTY ==
+
+# VIDEO
+mpv file.mp4                 # full playback
+mpv --no-video file.mp3      # audio only
+mpv --no-audio file.mp4      # video only
+mpv --vo=tct file.mp4        # ASCII mode (for tmux)
+
+# AUDIO
+cmus                         # playlists, library
+:add <TAB>                   # add tracks
+
+# IMAGES
+fim file.png                 # simple control
+sudo fbi -T 1 file.png       # full control on framebuffer
+
+# DOCUMENTS
+fbpdf file.pdf               # PDF viewer
+
+# ARCHIVES / COMPRESSION
+# decompress / list files
+unzip file.zip               # extract .zip
+unrar x file.rar             # extract .rar
+7z x file.7z                 # extract .7z
+tar -xvf file.tar             # extract .tar
+tar -xvzf file.tar.gz         # extract .tar.gz
+tar -xvjf file.tar.bz2        # extract .tar.bz2
+tar -xvJf file.tar.xz         # extract .tar.xz
+lrzip -d file.lrz             # decompress .lrz
+lzip -d file.lz               # decompress .lz
+zstd -d file.zst              # decompress .zst
+
+# compress / create archives
+zip file.zip files*           # create .zip
+rar a file.rar files*         # create .rar
+7z a file.7z files*           # create .7z
+tar -cvf file.tar files*      # create .tar
+tar -cvzf file.tar.gz files*  # create .tar.gz
+tar -cvjf file.tar.bz2 files* # create .tar.bz2
+tar -cvJf file.tar.xz files*  # create .tar.xz
+lrzip file                    # compress to .lrz
+lzip file                     # compress to .lz
+zstd file                     # compress to .zst
+
+### 
+# EMAIL - TTY / TUI
+###
+# NEOMUTT - FULL-FEATURED CLI EMAIL CLIENT
+neomutt
+# Navigation: j/k = move down/up, Enter = open, q = quit
+# Compose/Send: m = new, y = send, r = reply, f = forward
+# Folders: c = change mailbox, g = go to index
+# Attachments: a = attach, v = view
+# Search: / = search, l = limit messages
+
+# AERC - MODERN TUI EMAIL CLIENT
+aerc
+# Navigation: j/k = move down/up, Enter = open, q = quit
+# Compose/Send: m = new, y = send, r = reply, f = forward
+# Folders/Accounts: :open <folder>, :accounts, :subscribe <folder>
+# Attachments: :attach <file>, :save <file>
+# Search/Filter: :/pattern, :filter <pattern>
+
+### 
+# CHAT / MESSAGING - TTY / TUI
+###
+# WEECHAT - IRC / MATRIX (with plugins)
+weechat
+# Basics:
+#   /server add <name> irc.libera.chat/6697 -ssl   # add IRC server
+#   /connect <name>                               # connect
+#   /join #channel                                # join channel
+#   /part                                         # leave channel
+#   /quit                                         # exit
+#   /msg <nick> <text>                            # private message
+#   Alt+← / Alt+→                                 # switch buffers (channels)
+#
+# MATRIX via weechat-matrix plugin
+#   /plugin load matrix.so                        # load plugin
+#   /matrix connect <account>                     # connect account
+#   /join #room:server.tld                        # join Matrix room
+
+# GOMUKS - Minimal Matrix TUI
+gomuks
+# Ctrl+N / Ctrl+P = move between rooms
+# Enter = send, Esc = back
+
+== X/WAYLAND ==
+
+# VIDEO
+mpv file.mp4
+celluloid file.mp4           # mpv with GUI
+#vlc file.mp4                 # GUI, bloated but universal
+
+# AUDIO
+cmus                         # TUI works here too
+#audacious                    # GUI, lightweight
+
+# IMAGES
+feh file.png                 # minimal viewer
+sxiv file.png                # vim-like keys
+imv file.png                 # Wayland-native
+
+# PDF/DOCS
+#mupdf file.pdf               # fastest/lightest
+#zathura file.pdf             # vim-like PDF viewer
+
+### 
+# LaTeX - WORKS BOTH TTY AND X/WAYLAND
+###
+pdflatex name.tex
+

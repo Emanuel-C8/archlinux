@@ -1,0 +1,7 @@
+iproute2 net-tools wpa_supplicant dhclient resolvconf
+traceroute mtr curl wget netcat nmap tcpdump
+openssh autossh
+openvpn wireguard-tools
+bind-tools
+iperf3 nload iftop tcpflow ethtool
+
