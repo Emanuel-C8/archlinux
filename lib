@@ -3,7 +3,7 @@ function installpackages()
 {
 for a in `cat $1`; 
 do
-	sudo pacman -Sy $a --noconfirm --needed
+	sudo pacman -S $a --noconfirm --needed
 done
 }
 function installpackagesbatch()
