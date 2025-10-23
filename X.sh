@@ -1,6 +1,6 @@
 
     echo "Updating system..."
-    sudo pacman -Sy --noconfirm
+    sudo pacman -Syu --noconfirm
 
     echo "Installing essential packages for DWM and Xorg..."
     sudo pacman -S --noconfirm \
