@@ -1,1 +1,1 @@
-tlp htop btop nnn tmux tree less head tail
+tlp htop btop nnn tmux tree less
