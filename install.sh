@@ -2,7 +2,7 @@ chmod +x driver.sh X.sh addconf.sh pacman.sh yay.sh
 
 ./X.sh
 
-./driver.sh
+sudo ./driver.sh
 
 ./pacman.sh
 
