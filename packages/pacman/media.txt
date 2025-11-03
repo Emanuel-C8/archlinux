@@ -1,2 +1,2 @@
-mpv celluloid cmus alsa-utils mupdf ffmpeg yt-dlp perl-image-exiftool fbida feh sxiv imv
+pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber mpv celluloid cmus alsa-utils mupdf ffmpeg yt-dlp perl-image-exiftool fbida feh sxiv imv
 
