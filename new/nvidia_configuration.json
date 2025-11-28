@@ -120,7 +120,8 @@
         "granatier",
 	"acme",
 	"vegeta",
-	"teamspeak3"
+	"teamspeak3",
+	"ansible"
     ],
     "parallel_downloads": 10,
     "profile_config": {
