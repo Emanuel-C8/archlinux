@@ -1,0 +1,138 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": null,
+    "bootloader": "Grub",
+    "custom_commands": [],
+    "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "colemak",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "network_config": {
+        "nics": [
+            {
+                "dhcp": true,
+                "dns": [],
+                "gateway": null,
+                "iface": "eno1",
+                "ip": null
+            },
+            {
+                "dhcp": true,
+                "dns": [],
+                "gateway": null,
+                "iface": "wlan0",
+                "ip": null
+            }
+        ],
+        "type": "manual"
+    },
+    "ntp": true,
+    "packages": [
+        "bashtop",
+        "btop",
+        "fzf",
+        "git",
+        "github-cli",
+        "htop",
+        "powertop",
+        "reflector",
+        "tree",
+        "yt-dlp",
+        "yt-dlp-ejs",
+        "unzip",
+        "unrar",
+        "4ti2",
+        "7zip",
+        "tar",
+        "gzip",
+        "bzip2",
+        "bzip3",
+        "xz",
+        "lrzip",
+        "lzip",
+        "zstd",
+        "irssi",
+        "weechat",
+        "gomuks",
+        "go",
+        "python",
+        "python-pip",
+        "gcc",
+        "gvim",
+        "neovim",
+        "timew",
+        "task",
+        "calcurse",
+        "neomutt",
+        "aerc",
+        "wireplumber",
+        "mpv",
+        "ffmpeg4.4",
+        "mupdf",
+        "perl-image-exiftool",
+        "fbida",
+        "feh",
+        "sxiv",
+        "imv",
+        "iproute2",
+        "net-tools",
+        "iwd",
+        "dhclient",
+        "haskell-resolv",
+        "mtr",
+        "curl",
+        "wget",
+        "openbsd-netcat",
+        "nmap",
+        "tcpdump",
+        "openssh",
+        "autossh",
+        "openvpn",
+        "wireguard-tools",
+        "iperf3",
+        "nload",
+        "iftop",
+        "tcpflow",
+        "ethtool",
+        "texlive",
+        "texlive-lang",
+        "ghostscript",
+        "pandoc-cli",
+        "mdp",
+        "tlp",
+        "nnn",
+        "lf",
+        "tmux",
+        "less",
+        "granatier"
+    ],
+    "parallel_downloads": 10,
+    "profile_config": {
+        "gfx_driver": "Nvidia (proprietary)",
+        "greeter": null,
+        "profile": {
+            "custom_settings": {},
+            "details": [],
+            "main": "Xorg"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": true,
+    "timezone": "Europe/Rome",
+    "uki": false,
+    "version": "3.0.13"
+}
