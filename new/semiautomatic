@@ -1,0 +1,1 @@
+archinstall --config nvidia_configuration.json 
