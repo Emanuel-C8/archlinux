@@ -3,7 +3,7 @@
   hosts: localhost
   become: yes
   vars:
-    archinstall_json: "nvidia_configuration.json"  # Percorso al file JSON
+    archinstall_json: "archinstall/nvidia_configuration.json"  # Percorso al file JSON
   tasks:
     - name: Verifica che il file JSON esista
       stat:
