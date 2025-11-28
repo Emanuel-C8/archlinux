@@ -1,0 +1,35 @@
+---
+- name: Installare pacchetti da archinstall JSON
+  hosts: localhost
+  become: yes
+  vars:
+    archinstall_json: "nvidia_configuration.json"  # Percorso al file JSON
+  tasks:
+    - name: Verifica che il file JSON esista
+      stat:
+        path: "{{ archinstall_json }}"
+      register: file_stat
+
+    - name: Fallire se il file JSON non esiste
+      fail:
+        msg: "Il file {{ archinstall_json }} non esiste!"
+      when: not file_stat.stat.exists
+
+    - name: Caricare il file JSON di configurazione
+      set_fact:
+        packages_list: "{{ lookup('file', archinstall_json) | from_json }}"
+
+    - name: Mostrare i pacchetti da installare
+      debug:
+        msg: "Pacchetti da installare: {{ packages_list['packages'] }}"
+
+    - name: Aggiornare la cache dei pacchetti
+      pacman:
+        update_cache: yes
+
+    - name: Installare pacchetti con --needed in un'unica operazione
+      command: >
+        sudo pacman --noconfirm --needed --sync {{ packages_list['packages'] | join(' ') }}
+      environment:
+        LANG: en_US.UTF-8
+
