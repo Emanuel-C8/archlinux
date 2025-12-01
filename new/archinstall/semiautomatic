@@ -1,1 +1,2 @@
 archinstall --config nvidia_configuration.json 
+./.x.sh

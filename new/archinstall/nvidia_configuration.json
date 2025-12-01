@@ -121,7 +121,9 @@
 	"acme",
 	"vegeta",
 	"teamspeak3",
-	"ansible"
+	"ansible",
+	"cpupower",
+	"keyd"
     ],
     "parallel_downloads": 10,
     "profile_config": {
