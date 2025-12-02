@@ -125,7 +125,8 @@
 	"ansible",
 	"cpupower",
 	"keyd",
-	"elinks"
+	"elinks",
+	"cuda"
     ],
     "parallel_downloads": 10,
     "profile_config": {
