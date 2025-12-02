@@ -1,0 +1,21 @@
+#!/bin/bash
+function installpackages()
+{
+for a in `cat $1`; 
+do
+	sudo pacman -S $a --noconfirm --needed
+done
+}
+function installpackagesbatch()
+{
+    sudo pacman -S $(cat $1) --noconfirm --needed
+}
+function yayinstallpackagesbatch()
+{
+    yay -S $(cat $1) --noconfirm --needed
+}
+function fullupgrade()
+{
+    sudo pacman -Syu --noconfirm
+}
+
