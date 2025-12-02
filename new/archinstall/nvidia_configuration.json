@@ -41,6 +41,7 @@
     },
     "ntp": true,
     "packages": [
+	"man",
         "bashtop",
         "btop",
         "fzf",
@@ -123,7 +124,8 @@
 	"teamspeak3",
 	"ansible",
 	"cpupower",
-	"keyd"
+	"keyd",
+	"elinks"
     ],
     "parallel_downloads": 10,
     "profile_config": {
